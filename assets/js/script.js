@@ -101,4 +101,39 @@ document.addEventListener('DOMContentLoaded', () => {
             pitchPlaceholder.style.display = 'none';
         });
     }
+
+    // Chart.js Initialization
+    const ctx = document.getElementById('productionChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Transmissão (R$ 4.830)', 'Estrutura (R$ 4.810)', 'Montagem (R$ 1.200)'],
+                datasets: [{
+                    label: 'Custo de Produção (R$)',
+                    data: [4830, 4810, 1200],
+                    backgroundColor: [
+                        '#3b82f6', // Electric Blue
+                        '#8b5cf6', // Violet
+                        '#f43f5e'  // Accent Pink
+                    ],
+                    borderColor: '#0f172a', /* Dark bg match */
+                    borderWidth: 2,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#cbd5e1',
+                            font: { family: 'Inter' }
+                        }
+                    }
+                }
+            }
+        });
+    }
 });

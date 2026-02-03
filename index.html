@@ -16,6 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Open Graph / Social Media Embeds -->
     <meta property="og:title" content="SMTC-CR | Inovação em Transportes Industriais">
@@ -38,6 +39,7 @@
                     <li><a href="#tecnico">Funcionamento</a></li>
                     <li><a href="#beneficios">Benefícios</a></li>
                     <li><a href="#videos">Demonstração</a></li>
+                    <li><a href="#financeiro">Custos</a></li>
                     <li><a href="#galeria">Galeria</a></li>
                     <li><a href="#fichatecnica">Ficha Técnica</a></li>
                 </ul>
@@ -263,6 +265,131 @@
                         alt="Estudo de Movimento" loading="lazy"></div>
                 <div class="gallery-item proto"><img src="assets/img/prototypes/prototype3.png"
                         alt="Renderização Técnica" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Section -->
+    <section id="financeiro" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Viabilidade Econômica</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="finance-grid">
+                <!-- Charts Area -->
+                <div class="finance-charts">
+                    <div class="chart-container text-block">
+                        <h3>Composição de Custos (Produção)</h3>
+                        <canvas id="productionChart"></canvas>
+                        <p class="center mt-2 chart-total">Total Estimado: <strong>R$ 10.840,00</strong></p>
+                    </div>
+                </div>
+
+                <!-- Tables Area -->
+                <div class="finance-tables">
+                    <!-- Transmission Table -->
+                    <div class="finance-card">
+                        <div class="card-header">
+                            <h4>⚙️ Transmissão Mecânica</h4>
+                            <span class="badg-price">R$ 4.830</span>
+                        </div>
+                        <table class="simple-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Qtde</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Câmbio mecânico</td>
+                                    <td>1</td>
+                                    <td>R$ 1.300</td>
+                                </tr>
+                                <tr>
+                                    <td>Válvula acionamento</td>
+                                    <td>1</td>
+                                    <td>R$ 200</td>
+                                </tr>
+                                <tr>
+                                    <td>Coroas fixas</td>
+                                    <td>2</td>
+                                    <td>R$ 560</td>
+                                </tr>
+                                <tr>
+                                    <td>Engrenagens ind.</td>
+                                    <td>5</td>
+                                    <td>R$ 1.150</td>
+                                </tr>
+                                <tr>
+                                    <td>Correntes ind.</td>
+                                    <td>6m</td>
+                                    <td>R$ 1.020</td>
+                                </tr>
+                                <tr>
+                                    <td>Correntes mod.</td>
+                                    <td>4m</td>
+                                    <td>R$ 600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Structure Table -->
+                    <div class="finance-card">
+                        <div class="card-header">
+                            <h4>🧱 Estrutura e Mobilidade</h4>
+                            <span class="badg-price">R$ 4.810</span>
+                        </div>
+                        <table class="simple-table">
+                            <tbody>
+                                <tr>
+                                    <td>Estrutura Aço (Solda)</td>
+                                    <td>1</td>
+                                    <td>R$ 2.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Rodas Alta Temp.</td>
+                                    <td>4</td>
+                                    <td>R$ 1.360</td>
+                                </tr>
+                                <tr>
+                                    <td>Suportes Modulares</td>
+                                    <td>Kit</td>
+                                    <td>R$ 850</td>
+                                </tr>
+                                <tr>
+                                    <td>Pintura/Tratamento</td>
+                                    <td>-</td>
+                                    <td>R$ 600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Maintenance Table -->
+                    <div class="finance-card maintenance-card">
+                        <div class="card-header">
+                            <h4>🔧 Manutenção Preventiva</h4>
+                            <span class="badg-price green">~R$ 1.020 / ano</span>
+                        </div>
+                        <div class="maintenance-grid">
+                            <div class="maint-item">
+                                <span>Graxa (Mensal)</span>
+                                <strong>R$ 40,00</strong>
+                            </div>
+                            <div class="maint-item">
+                                <span>Peças (Anual Estimado)</span>
+                                <strong>R$ 1.020,00</strong>
+                            </div>
+                        </div>
+                        <p class="small-text center mt-2">Diferente de sistemas complexos, a manutenção resume-se a
+                            lubrificação e troca pontual de itens de desgaste.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
