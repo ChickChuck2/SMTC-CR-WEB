@@ -74,4 +74,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Listen to scroll
     window.addEventListener('scroll', revealOnScroll);
+
+    // Smart Video Placeholder Logic
+    const pitchVideo = document.getElementById('pitchVideo');
+    const pitchPlaceholder = document.getElementById('pitchPlaceholder');
+
+    if (pitchVideo && pitchPlaceholder) {
+        // Handle source error (missing file)
+        const sources = pitchVideo.getElementsByTagName('source');
+        if (sources.length > 0) {
+            sources[0].addEventListener('error', () => {
+                pitchVideo.style.display = 'none';
+                pitchPlaceholder.style.display = 'flex';
+            });
+        }
+
+        // Also handle video error
+        pitchVideo.addEventListener('error', () => {
+            pitchVideo.style.display = 'none';
+            pitchPlaceholder.style.display = 'flex';
+        }, true);
+
+        // Success case
+        pitchVideo.addEventListener('loadeddata', () => {
+            pitchVideo.style.display = 'block';
+            pitchPlaceholder.style.display = 'none';
+        });
+    }
 });
